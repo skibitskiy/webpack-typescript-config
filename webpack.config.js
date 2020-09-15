@@ -12,14 +12,6 @@ module.exports = {
             test: /\.(ts|tsx|js|jsx)$/,
             loader: 'babel-loader',
             include: path.resolve(__dirname, 'src'),
-            options: {
-              configFile: false,
-              presets: [
-                '@babel/preset-react',
-                '@babel/preset-env',
-                '@babel/preset-typescript',
-              ]
-            }
           }
         ]
     }

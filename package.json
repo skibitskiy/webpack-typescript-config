@@ -5,7 +5,8 @@
   "main": "./src/index.tsx",
   "scripts": {
     "build": "webpack --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-w": "webpack --mode development --watch",
+    "test": "jest ./test"
   },
   "author": "",
   "license": "ISC",
@@ -21,7 +22,16 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
+    "babel-jest": "^26.3.0",
+    "jest": "^26.4.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
+    "styled-components": "^5.2.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[jt]sx?$": "babel-jest"
+    }
   }
 }
