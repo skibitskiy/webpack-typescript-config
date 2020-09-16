@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --mode development",
     "build-w": "webpack --mode development --watch",
-    "test": "jest ./test"
+    "test": "jest ./test/units",
+    "tsd": "tsd ./test/tsd"
   },
   "author": "",
   "license": "ISC",
@@ -27,7 +28,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.0",
+    "tsd": "^0.13.1"
   },
   "jest": {
     "transform": {
