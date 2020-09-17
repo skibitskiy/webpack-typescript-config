@@ -49,7 +49,11 @@ const StyledButton = styled.button`
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     color: ${(props) => props.theme.fontColor};
-    background-color: ${(props) => props.theme.elementBgColor}
+    background-color: ${(props) => props.theme.elementBgColor};
+
+    &:hover {
+        background-color: red;
+    }
 `;
 
 export {
