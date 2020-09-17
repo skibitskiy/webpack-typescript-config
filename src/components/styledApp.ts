@@ -8,7 +8,8 @@ const StyledApp = styled.div`
     justify-content: center;
     align-items: center;
     
-    background-color: #f0f0f0;
+    color: ${(props) => props.theme.fontColor};
+    background-color: ${(props) => props.theme.mainBgColor};
 `;
 
 const StyledUserInput = styled.input`
@@ -16,9 +17,9 @@ const StyledUserInput = styled.input`
     width: 2em;
 
     font-size: 48px;
-
-    background-color: #e8e8e8;
-    border: 2px solid #6b6b6b;
+    color: ${(props) => props.theme.fontColor};
+    background-color: ${(props) => props.theme.elementBgColor};
+    border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     outline: none;
 
@@ -41,9 +42,20 @@ const StyledOperation = styled.div`
     }
 `;
 
+const StyledButton = styled.button`
+    padding: 8px;
+    
+    outline: 0;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: ${(props) => props.theme.fontColor};
+    background-color: ${(props) => props.theme.elementBgColor}
+`;
+
 export {
     StyledApp,
     StyledUserInput,
     StyledResult,
-    StyledOperation
+    StyledOperation,
+    StyledButton
 }
