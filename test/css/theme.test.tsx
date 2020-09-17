@@ -71,17 +71,11 @@ describe('Styled-Components', () => {
         });
     });
 
-    it('Theme switch button on hover is red', () => {
-        act(() => {
-            render(<App />);
-        });
-
-        const button = document.querySelector('.theme-switch');
-
-        expect(button).toHaveStyleRule('background-color', themes.day.elementBgColor);
-
-        user.hover(button);
-
-        expect(button).toHaveStyleRule('background-color', 'red');
+    it('StyledButton. Pseudo-elements and pseudo-classes', () => {
+        const doc = create(
+            <StyledButton theme={themes.day} />
+        ).toJSON();
+        expect(doc).toHaveStyleRule('background-color', 'red', { modifier: ':hover' });
+        expect(doc).toHaveStyleRule('content', '"pops"', { modifier: '::before' });
     });
 })

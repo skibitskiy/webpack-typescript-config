@@ -54,6 +54,10 @@ const StyledButton = styled.button`
     &:hover {
         background-color: red;
     }
+
+    &::before {
+        content: "pops"
+    }
 `;
 
 export {
