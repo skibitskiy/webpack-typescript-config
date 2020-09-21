@@ -1,0 +1,16 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import CommentForm from '../components/CommentForm.tsx';
+
+<Meta title="Components/CommentForm" component={CommentForm} />
+
+# Comment
+
+CommentForm component
+
+export const Template = (args) => <CommentForm {...args} />;
+
+<Canvas>
+    <Story name="Primary">
+        { Template.bind({}) }
+    </Story>
+</Canvas>

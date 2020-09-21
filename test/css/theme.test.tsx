@@ -6,7 +6,7 @@ import { create } from 'react-test-renderer';
 import { render, act, cleanup } from '@testing-library/react';
 import user from '@testing-library/user-event';
 
-import { StyledApp, StyledUserInput, StyledButton } from '../../src/components/styledApp';
+import { StyledApp } from '../../src/components/styledApp';
 import App from '../../src/components/App.tsx';
 import { themes } from '../../src/helpers.ts';
 
@@ -27,22 +27,6 @@ describe('Styled-Components', () => {
         ).toJSON();
         expect(doc).toHaveStyleRule('color', themes.day.fontColor);
         expect(doc).toHaveStyleRule('background-color', themes.day.mainBgColor);
-    });
-    
-    it('StyledUserInput', () => {
-        const doc = create(
-            <StyledUserInput theme={themes.day}/>
-        ).toJSON();
-        expect(doc).toHaveStyleRule('color', themes.day.fontColor);
-        expect(doc).toHaveStyleRule('background-color', themes.day.elementBgColor);
-    });
-
-    it('StyledButton', () => {
-        const doc = create(
-            <StyledButton theme={themes.day} />
-        ).toJSON();
-        expect(doc).toHaveStyleRule('color', themes.day.fontColor);
-        expect(doc).toHaveStyleRule('background-color', themes.day.elementBgColor);
     });
 
     it('Theme switch', () => {
@@ -72,13 +56,5 @@ describe('Styled-Components', () => {
             color: themes.night.fontColor,
             'background-color': themes.night.elementBgColor
         });
-    });
-
-    it('StyledButton. Pseudo-elements and pseudo-classes', () => {
-        const doc = create(
-            <StyledButton theme={themes.day} />
-        ).toJSON();
-        expect(doc).toHaveStyleRule('background-color', 'red', { modifier: ':hover' });
-        expect(doc).toHaveStyleRule('content', '"pops"', { modifier: '::before' });
     });
 })

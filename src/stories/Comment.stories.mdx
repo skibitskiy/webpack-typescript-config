@@ -1,0 +1,16 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import Comment from '../components/Comment.tsx';
+
+<Meta title="Components/Comment" component={Comment} />
+
+# Comment
+
+Comment component
+
+export const Template = (args) => <Comment {...args} />;
+
+<Canvas>
+    <Story name="Primary">
+        { Template.bind({}) }
+    </Story>
+</Canvas>

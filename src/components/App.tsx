@@ -1,12 +1,25 @@
+/// <reference path='../helpers.d.ts' />
+/// <reference path='./App.d.ts' />
+
 import React, { useState, useCallback } from 'react';
 import { ThemeProvider } from "styled-components";
 
-import { StyledApp, StyledButton } from './styledApp.ts';
-import Operation from './Operation.tsx'
-import { themes, multiply, sum } from '../helpers.ts';
+import { StyledApp, StyledButton, StyledCard } from './styledApp.ts';
+import { themes } from '../helpers.ts';
+
+import Comment from "./Comment.tsx";
+import CommentForm from './CommentForm.tsx';
 
 function App() {
-    const [theme, setTheme] = useState(themes.day);
+    const [comments, setComments] = useState<comment[]>([{
+        author: 'Maxim',
+        text: 'Hi! U can enter u\'r comment below'
+    }]);
+    const addComment = useCallback((comment) => {
+        setComments((state) => [comment, ...state]);
+    }, [])
+
+    const [theme, setTheme] = useState<theme>(themes.day);
     const changeTheme = useCallback(() => {
         setTheme((theme) => theme === themes.day ? themes.night : themes.day)
     }, [])
@@ -15,8 +28,8 @@ function App() {
         <ThemeProvider theme={theme}>
             <StyledApp className='app'>
                 <StyledButton className='theme-switch' onClick={changeTheme}>Изменить тему</StyledButton>
-                <Operation operation={multiply} title={'Multiply'}/>
-                <Operation operation={sum} title={'Summarize'}/>
+                { comments.map((comment) => <Comment {...comment}/>)}
+                <CommentForm addComment={addComment}/>
             </StyledApp>
         </ThemeProvider>
     )

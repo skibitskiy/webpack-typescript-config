@@ -50,6 +50,7 @@
     "sb": "^6.0.21",
     "storycap": "^3.0.1",
     "styled-components": "^5.2.0",
+    "styled-reset": "^4.2.3",
     "tsd": "^0.13.1"
   },
   "jest": {

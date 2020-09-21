@@ -4,12 +4,14 @@ const themes: { day: theme, night: theme } = {
     day: {
         fontColor: '#000',
         mainBgColor: '#f0f0f0',
-        elementBgColor: '#e8e8e8'
+        elementBgColor: '#f5f5f5',
+        headerColor: '#6d6d6d'
     },
     night: {
-        fontColor: '#9fa8da',
+        fontColor: '#e8eaf6',
         mainBgColor: '#000051',
-        elementBgColor: '#534bae'
+        elementBgColor: '#3f51b5',
+        headerColor: '#aab6fe'
     }
 }
 
