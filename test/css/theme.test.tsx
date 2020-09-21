@@ -1,6 +1,7 @@
 import React from 'react';
 import 'jest-styled-components';
 import '@testing-library/jest-dom';
+import initStoryshots from '@storybook/addon-storyshots';
 import { create } from 'react-test-renderer';
 import { render, act, cleanup } from '@testing-library/react';
 import user from '@testing-library/user-event';
@@ -8,6 +9,8 @@ import user from '@testing-library/user-event';
 import { StyledApp, StyledUserInput, StyledButton } from '../../src/components/styledApp';
 import App from '../../src/components/App.tsx';
 import { themes } from '../../src/helpers.ts';
+
+initStoryshots();
 
 const assertStyles = (element: Element, styles) => {
     Object.entries(styles).forEach(([rule, value]) => {

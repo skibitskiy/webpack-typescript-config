@@ -5,7 +5,12 @@ import {
     StyledOperation
 } from './styledApp.ts';
 
-function Operation({operation, title}: { operation: Function, title: string }) {
+export interface OperationProps {
+    operation: Function;
+    title: string;
+}
+
+const Operation: React.FC<OperationProps> = ({operation, title}) => {
     const [nums, setNums] = useState(['0', '0']);
     const cleanNums: Array<number> = nums.map((num: string) => {
         const res = parseInt(num);

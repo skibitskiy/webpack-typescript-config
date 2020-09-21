@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Operation Multiply 1`] = `
+.c3 {
+  height: 1em;
+  width: 2em;
+  font-size: 48px;
+  color: #000;
+  background-color: #e8e8e8;
+  border: 2px solid rgba(0,0,0,0.5);
+  border-radius: 5px;
+  outline: none;
+}
+
+.c2 + .c2 {
+  margin-left: 16px;
+}
+
+.c4 {
+  font-size: 48px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 + .c0 {
+  margin-top: 24px;
+}
+
+<div
+  className="c0 c1"
+  onChange={[Function]}
+>
+  <h2>
+    Multiply
+  </h2>
+  <div>
+    <input
+      className="c2 c3"
+      data-index={0}
+      value="0"
+    />
+    <input
+      className="c2 c3"
+      data-index={1}
+      value="0"
+    />
+  </div>
+  <div
+    className="c4"
+  >
+    Ответ: 
+    0
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Operation Sum 1`] = `
+.c3 {
+  height: 1em;
+  width: 2em;
+  font-size: 48px;
+  color: #000;
+  background-color: #e8e8e8;
+  border: 2px solid rgba(0,0,0,0.5);
+  border-radius: 5px;
+  outline: none;
+}
+
+.c2 + .c2 {
+  margin-left: 16px;
+}
+
+.c4 {
+  font-size: 48px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 + .c0 {
+  margin-top: 24px;
+}
+
+<div
+  className="c0 c1"
+  onChange={[Function]}
+>
+  <h2>
+    Summarize
+  </h2>
+  <div>
+    <input
+      className="c2 c3"
+      data-index={0}
+      value="0"
+    />
+    <input
+      className="c2 c3"
+      data-index={1}
+      value="0"
+    />
+  </div>
+  <div
+    className="c4"
+  >
+    Ответ: 
+    0
+  </div>
+</div>
+`;
