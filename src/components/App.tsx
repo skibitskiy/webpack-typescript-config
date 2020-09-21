@@ -14,6 +14,7 @@ function App() {
     return (
         <ThemeProvider theme={theme}>
             <StyledApp className='app'>
+                WOW
                 <StyledButton className='theme-switch' onClick={changeTheme}>Изменить тему</StyledButton>
                 <Operation operation={multiply} title={'Multiply'}/>
                 <Operation operation={sum} title={'Summarize'}/>
