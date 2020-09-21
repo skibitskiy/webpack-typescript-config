@@ -6,6 +6,8 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-docs"
+    "@storybook/addon-docs",
+    "@storybook/addon-storyshots",
+    "storycap/register"
   ]
 }

@@ -4,6 +4,8 @@ export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
 }
 
+import { withScreenshot } from 'storycap';
+
 export const globalTypes = {
   theme: {
     name: 'Theme',
@@ -16,4 +18,4 @@ export const globalTypes = {
   },
 };
 
-export const decorators = [themeProvider];
+export const decorators = [themeProvider, withScreenshot];
